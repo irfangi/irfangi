@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irfangi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+    body{
+        font-family: 'Roboto', sans-serif;
+    }
+    .image-profile{
+        position: relative;
+    }
+    .bg-profile-1{
+        position: absolute;
+        width: 519.8px;
+        height: 447.31px;
+
+        background: #474747;
+        border-radius: 203px 284px 177px 172px;
+        transform: rotate(-42.73deg);
+    }
+    .bg-profile-2{
+        position: absolute;
+        left: 40px;
+        top: 20px;
+        width: 451.26px;
+        height: 406.66px;
+        
+        overflow: hidden;
+        border-radius: 183px 203.328px 160px;
+        transform: rotate(15.09deg);
+    }
+    .bg-profile-2 img{
+        transform: rotate(-15.09deg);
+        position: absolute;
+        top: -106px;
+    }
+    .skills{
+        padding-top: 25px;
+        padding-bottom: 50px;
+    }
+    .experience{
+        min-height: 200px;
+        border-top-left-radius: 50% 15px;
+        border-top-right-radius: 50% 15px;
+        margin-top: -16px;
+        padding-top: 32px;
+    }
+    .card-exp .line{
+        display: inline-block;
+        border-top: 4px solid #faf089;
+        width: 100%;
+    }
+    .card-exp .cicle{
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border: 4px solid #faf089;
+        border-radius: 50%;
+    }
+</style>
+<body>
+    <nav class="flex items-center justify-end flex-wrap bg-gray-900 p-6 lg:text-right">
+        <div class="container mx-auto">
+            <div class="block lg:hidden">
+              <button class="flex items-center px-3 py-2 border rounded text-gray-300 border-teal-400 hover:text-yellow-300 hover:border-white">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+              </button>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+              <div class="text-sm lg:flex-grow capitalize">
+                <a href="#introduction" class="block lg:inline-block lg:mt-0 text-yellow-300 cursor-default hover:text-yellow-300 font-medium text-lg pr-4" onclick="activeNav(this)">
+                  Introduction
+                </a>
+                <a href="#aboutme" class="block lg:inline-block lg:mt-0 text-gray-300 hover:text-yellow-300 font-medium text-lg px-4">
+                    About Me
+                  </a>
+                <a href="#skills" class="block lg:inline-block lg:mt-0 text-gray-300 hover:text-yellow-300 font-medium text-lg px-4">
+                  My Skills
+                </a>
+                <a href="#exp" class="block lg:inline-block lg:mt-0 text-gray-300 hover:text-yellow-300 font-medium text-lg px-4">
+                    Experience
+                </a>
+                <a href="#follow" class="block lg:inline-block lg:mt-0 text-gray-300 hover:text-yellow-300 font-medium text-lg pl-4">
+                  Follow & Contact Me
+                </a>
+              </div>
+            </div>
+        </div>
+    </nav>
+    <section class="bg-gray-900 px-6 py-6">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap" style="height: 80vh;">
+                <div class="lg:w-1/2 flex items-center" style="height: 100%;">
+                    <div>
+                        <h4 class="text-gray-300 font-bold text-3xl">Hello</h4>
+                        <h4 class="text-gray-300 font-semibold text-2xl">I'am <span class="text-yellow-300">Irfangi</span></h4>
+                        <h4 class="text-gray-300 font-semibold text-2xl">Web Developer & Freelancer</h4>
+                        <button class="bg-transparent hover:bg-yellow-300 text-yellow-300 font-semibold hover:text-black pt-0 pb-1 px-4 border border-yellow-300 hover:border-transparent rounded-full text-md mt-2">About Me</button>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="image-profile">
+                        <div class="bg-profile-1">
+                        </div>
+                        <div class="bg-profile-2">
+                            <img src="./asset/images/profile.JPG" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-800 text-center py-6" id="aboutme">
+        <div class="flex flex-wrap justify-center">
+            <div class="w-2/5">
+                <h4 class="text-yellow-300 font-medium text-xl mb-2">About Me</h4>
+                <p class="text-gray-300 font-medium leading-relaxed">Experienced Front End & Backend Developer with a demonstrated history of working in information and industry. Skilled in PHP, Javascript, Angular, jQuery, HTML, CSS, and Laravel. Strong engineering professional with a Teknik Informatika focused in teknik informatika from STMIK AKAKOM.</p>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-800 flex px-6 text-center skills" id="skills">
+        <div class="container mx-auto">
+            <h4 class="text-yellow-300 font-medium text-xl mb-6">My Skills</h4>
+            <div class="flex flex-wrap justify-center">
+                <div class="w-1/2 px-2">
+                    <div class="bg-gray-700 p-6 rounded">
+                        <div class="mb-5">
+                            <div class="flex justify-center">
+                                <img src="./asset/icon/frontend.png" alt="" width="100px">
+                            </div>
+                            <p class="uppercase text-gray-300 font-normal text-lg mt-2">FRontend</p>
+                        </div>
+                        <hr>
+                        <div class="flex flex-wrap justify-center">
+                            <div class="w-1/3 my-3">
+                                <div class="flex justify-center">
+                                    <img src="./asset/icon/html-5.png" alt="" width="60px">
+                                </div>
+                                <p class="text-gray-300">HTML 5</p>
+                            </div>
+                            <div class="w-1/3 my-3">
+                                <div class="flex justify-center">
+                                    <img src="./asset/icon/css3.png" alt="" width="60px">
+                                </div>
+                                <p class="text-gray-300">CSS3</p>
+                            </div>
+                            <div class="w-1/3 my-3">
+                                <div class="flex justify-center">
+                                    <img src="./asset/icon/javascript.png" alt="" width="60px">
+                                </div>
+                                <p class="text-gray-300">Javascript</p>
+                            </div>
+                            <div class="w-1/3 my-3">
+                                <div class="flex justify-center">
+                                    <img src="./asset/icon/jquery.png" alt="" width="60px">
+                                </div>
+                                <p class="text-gray-300">JQuery</p>
+                            </div>
+                            <div class="w-1/3 my-3">
+                                <div class="flex justify-center">
+                                    <img src="./asset/icon/angularjs.png" alt="" width="60px">
+                                </div>
+                                <p class="text-gray-300">Angular</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/2 px-2">
+                    <div class="bg-gray-700 p-6 rounded">
+                        <div class="mb-5">
+                            <div class="flex justify-center">
+                                <img src="./asset/icon/backend.png" alt="" width="100px">
+                            </div>
+                            <p class="uppercase text-gray-300 font-normal text-lg mt-2">Backend</p>
+                        </div>
+                        <hr>
+                        <div class="flex flex-wrap justify-center">
+                            <div class="w-1/3 my-3">
+                                <div class="flex justify-center">
+                                    <img src="./asset/icon/php.png" alt="" width="60px">
+                                </div>
+                                <p class="text-gray-300">PHP</p>
+                            </div>
+                            <div class="w-1/3 my-3">
+                                <div class="flex justify-center">
+                                    <img src="./asset/icon/laravel.png" alt="" width="60px">
+                                </div>
+                                <p class="text-gray-300">Laravel</p>
+                            </div>
+                            <div class="w-1/3 my-3">
+                                <div class="flex justify-center">
+                                    <img src="./asset/icon/mysql.png" alt="" width="60px">
+                                </div>
+                                <p class="text-gray-300">Mysql</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="experience bg-gray-900 px-6 pb-6" id="exp">
+        <div class="container mx-auto text-center">
+            <h4 class="text-yellow-300 font-medium text-xl mb-6">My Experience</h4>
+            <div class="flex flex-wrap">
+                <div class="w-1/3 p-3">
+                    <h5 class="capitalize font-semibold text-xl text-yellow-300 mb-4">Work & internship</h5>
+                    <div class="card-exp text-left ">
+                        <div class="flex items-center">
+                            <div class="cicle"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="px-3 py-2">
+                            <p class="text-gray-300 font-light text-xs">2019 - Present</p>
+                            <p class="text-gray-300 font-normal text-lg">Frontend Web Developer at BIZNET</p>
+                        </div>
+                    </div>
+                    <div class="card-exp text-left ">
+                        <div class="flex items-center">
+                            <div class="cicle"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="px-3 py-2">
+                            <p class="text-gray-300 font-light text-xs">2018 - 2019</p>
+                            <p class="text-gray-300 font-normal text-lg">Backend Web Developer at Tata Sarana Mandiri (TSM)</p>
+                        </div>
+                    </div>
+                    <div class="card-exp text-left ">
+                        <div class="flex items-center">
+                            <div class="cicle"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="px-3 py-2">
+                            <p class="text-gray-300 font-light text-xs">January - March 2018</p>
+                            <p class="text-gray-300 font-normal text-lg">Internship at Indonesia Indicator (Ebdesk)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/3 p-3">
+                    <h5 class="capitalize font-semibold text-xl text-yellow-300 mb-4">Education</h5>
+                    <div class="card-exp text-left ">
+                        <div class="flex items-center">
+                            <div class="cicle"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="px-3 py-2">
+                            <p class="text-gray-300 font-light text-xs">2015 - 2019</p>
+                            <p class="text-gray-300 font-normal text-lg">Teknik Informatika at STMIK AKAKOM YOGYAKARTA</p>
+                        </div>
+                    </div>
+                    <div class="card-exp text-left ">
+                        <div class="flex items-center">
+                            <div class="cicle"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="px-3 py-2">
+                            <p class="text-gray-300 font-light text-xs">2012 - 2015</p>
+                            <p class="text-gray-300 font-normal text-lg">Teknik Kendaraan Ringan at Smk Nawa Bhakti Kebumen</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-1/3 p-3">
+                    <h5 class="capitalize font-semibold text-xl text-yellow-300 mb-4">organitataion</h5>
+                    <div class="card-exp text-left ">
+                        <div class="flex items-center">
+                            <div class="cicle"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="px-3 py-2">
+                            <p class="text-gray-300 font-light text-xs">2017 - 2018</p>
+                            <p class="text-gray-300 font-normal text-lg">Core Member Skill Development Division at HMJ TI STMIK AKAKOM YOGYAKARTA</p>
+                        </div>
+                    </div>
+                    <div class="card-exp text-left ">
+                        <div class="flex items-center">
+                            <div class="cicle"></div>
+                            <div class="line"></div>
+                        </div>
+                        <div class="px-3 py-2">
+                            <p class="text-gray-300 font-light text-xs">2016 - 2017</p>
+                            <p class="text-gray-300 font-normal text-lg">Core Member Networking Division at HMJ TI STMIK AKAKOM YOGYAKARTA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-gray-900 px-6" id="follow">
+        <div class="container mx-auto text-center">
+            <h4 class="text-yellow-300 font-medium text-xl mb-6">Follow & Contact Me</h4>
+            <div class="flex flex-wrap">
+                <div class="w-1/6 flex justify-center">
+                    <a href="mailto:irfangi564@gmail.com" style="margin:70px 0">
+                        <img src="./asset/icon/mail.png" alt="" width="60">
+                    </a>
+                </div>
+                <div class="w-1/6 flex justify-center">
+                    <a href="https://www.linkedin.com/in/irfangi-fangi/" style="margin-top:70px;">
+                        <img src="./asset/icon/linkedin.png" alt="" width="60">
+                    </a>
+                </div>
+                <div class="w-1/6 flex justify-center">
+                    <a href="" style="margin-top: 90px;">
+                        <img src="./asset/icon/github.png" alt="" width="60">
+                    </a>
+                </div>
+                <div class="w-1/6 flex justify-center">
+                    <a href="https://www.instagram.com/irfngi/" style="margin-top: 65px;">
+                        <img src="./asset/icon/instagram.png" alt="" width="60">
+                    </a>
+                </div>
+                <div class="w-1/6 flex justify-center">
+                    <a href="https://www.facebook.com/ipan.xida" style="margin-top: 80px;">
+                        <img src="./asset/icon/facebook.png" alt="" width="60">
+                    </a>
+                </div>
+                <div class="w-1/6 flex justify-center">
+                    <a href="https://twitter.com/irfngi" style="margin:75px 0">
+                        <img src="./asset/icon/twitter.png" alt="" width="60">
+                    </a>
+                </div>
+            </div>
+            <hr class="text-gray-300">
+            <div class="p-5">
+                <p class="text-gray-300 text-sm">Copyright © 2020. All Rights Reserved.</p>
+            </div>
+        </div>
+    </section>
+    <script>
+        const activeNav = (element)=>{
+            alert('cek')
+            console.log(element);
+        };
+    </script>
+</body>
+</html>
