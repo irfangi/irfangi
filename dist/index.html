@@ -3,93 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="custom.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Irfangi</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
-<style>
-    html{
-        scroll-behavior: smooth;
-    }
-    body{
-        font-family: 'Roboto', sans-serif;
-    }
-    .image-profile{
-        position: relative;
-    }
-    .bg-profile-1{
-        position: absolute;
-        width: 519.8px;
-        height: 447.31px;
-
-        background: #474747;
-        border-radius: 203px 284px 177px 172px;
-        transform: rotate(-42.73deg);
-    }
-
-    .bg-profile-2{
-        position: absolute;
-        left: 40px;
-        top: 20px;
-        width: 451.26px;
-        height: 406.66px;
-        
-        overflow: hidden;
-        border-radius: 183px 203.328px 160px;
-        transform: rotate(15.09deg);
-    }
-    .bg-profile-2 img{
-        transform: rotate(-15.09deg);
-        position: absolute;
-        top: -106px;
-    }
-    .skills{
-        padding-top: 25px;
-        padding-bottom: 50px;
-    }
-    .experience{
-        min-height: 200px;
-        border-top-left-radius: 50% 15px;
-        border-top-right-radius: 50% 15px;
-        margin-top: -16px;
-        padding-top: 32px;
-    }
-    .card-exp .line{
-        display: inline-block;
-        border-top: 4px solid #faf089;
-        width: 100%;
-    }
-    .card-exp .cicle{
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border: 4px solid #faf089;
-        border-radius: 50%;
-    }
-</style>
 <body>
     <nav class="flex items-center justify-end flex-wrap bg-gray-900 p-6 lg:text-right">
         <div class="container mx-auto">
-            <div class="block lg:hidden">
-              <button class="flex items-center px-3 py-2 border rounded text-gray-300 border-teal-400 hover:text-yellow-300 hover:border-white">
+            <div class="block lg:hidden my-3 flex justify-end">
+              <button class="flex items-center px-3 py-2 focus:border-0 rounded text-gray-300" id="toggleMenu">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
               </button>
             </div>
-            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-              <div class="text-sm lg:flex-grow capitalize">
-                <a href="#introduction" class="block lg:inline-block lg:mt-0 text-yellow-300 cursor-default hover:text-yellow-300 font-medium text-lg pr-4" onclick="activeNav(this)">
+            <div class="w-full hidden flex-grow lg:flex lg:items-center lg:w-auto" id="menuList">
+              <div class="text-sm lg:flex-grow capitalize text-center md:center lg:text-right xl:text-right ">
+                <a href="#introduction" class="bg-gray-800 lg:bg-gray-900 xl:bg-gray-900 block lg:inline-block lg:mt-0 cursor-default text-gray-300 hover:text-yellow-300 font-medium text-lg lg:px-4 py-4 mb-1 lg:mb-0 xl:mb-0">
                   Introduction
                 </a>
-                <a href="#aboutme" class="block lg:inline-block lg:mt-0 text-gray-300 hover:text-yellow-300 font-medium text-lg px-4">
+                <a href="#aboutme" class="bg-gray-800 lg:bg-gray-900 xl:bg-gray-900 block lg:inline-block lg:mt-0 text-gray-300 hover:text-yellow-300 font-medium text-lg lg:px-4 py-4 mb-1 lg:mb-0 xl:mb-0">
                     About Me
                   </a>
-                <a href="#skills" class="block lg:inline-block lg:mt-0 text-gray-300 hover:text-yellow-300 font-medium text-lg px-4">
+                <a href="#skills" class="bg-gray-800 lg:bg-gray-900 xl:bg-gray-900 block lg:inline-block lg:mt-0 text-gray-300 hover:text-yellow-300 font-medium text-lg lg:px-4 py-4 mb-1 lg:mb-0 xl:mb-0">
                   My Skills
                 </a>
-                <a href="#exp" class="block lg:inline-block lg:mt-0 text-gray-300 hover:text-yellow-300 font-medium text-lg px-4">
+                <a href="#exp" class="bg-gray-800 lg:bg-gray-900 xl:bg-gray-900 block lg:inline-block lg:mt-0 text-gray-300 hover:text-yellow-300 font-medium text-lg lg:px-4 py-4 mb-1 lg:mb-0 xl:mb-0">
                     Experience
                 </a>
-                <a href="#follow" class="block lg:inline-block lg:mt-0 text-gray-300 hover:text-yellow-300 font-medium text-lg pl-4">
+                <a href="#follow" class="bg-gray-800 lg:bg-gray-900 xl:bg-gray-900 block lg:inline-block lg:mt-0 text-gray-300 hover:text-yellow-300 font-medium text-lg lg:pl-4 py-4 mb-1 lg:mb-0 xl:mb-0">
                   Follow & Contact Me
                 </a>
               </div>
@@ -335,11 +276,6 @@
             </div>
         </div>
     </section>
-    <script>
-        const activeNav = (element)=>{
-            alert('cek')
-            console.log(element);
-        };
-    </script>
+    <script src="./main.js"></script>
 </body>
 </html>
