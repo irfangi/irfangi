@@ -6,6 +6,9 @@ const { data:blogs } = await useAsyncData("blog", () =>
 
 <template>
   <main>
+    <div class="container mx-auto">
+      test
+    </div>
     <ul>
       <li v-for="(blog, i) of blogs" :key="i">
         <NuxtLink :to="blog._path">{{ blog.title }}</NuxtLink>

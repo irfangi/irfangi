@@ -1,14 +1,12 @@
 <template>
-  <h1>Hello 👋</h1>
-  <p>This website will update coming soon </p>
+  <NuxtLayout>
+    <!-- <h1>Hello 👋</h1>
+    <p>This website will update coming soon</p> -->
+  </NuxtLayout>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
-</style>
+<style></style>
