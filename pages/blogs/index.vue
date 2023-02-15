@@ -1,14 +1,7 @@
-<script setup>
-const { data:blogs } = await useAsyncData("blog", () =>
-  queryContent("/blogs").find()
-);
-</script>
-
 <template>
   <main>
-    <div class="container mx-auto">
-      test
-    </div>
+    <h1>Zion Adventure Photog</h1>
+
     <ul>
       <li v-for="(blog, i) of blogs" :key="i">
         <NuxtLink :to="blog._path">{{ blog.title }}</NuxtLink>
@@ -17,4 +10,17 @@ const { data:blogs } = await useAsyncData("blog", () =>
   </main>
 </template>
 
-<style></style>
+<script setup>
+definePageMeta({
+  layout: "blog",
+});
+const { data: blogs } = await useAsyncData("blog", () =>
+  queryContent("/blogs").find()
+);
+</script>
+<style scoped>
+h1 {
+  font-size: 38px;
+  @apply text-center;
+}
+</style>
