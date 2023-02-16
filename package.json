@@ -18,6 +18,8 @@
     "tailwindcss": "^3.2.6"
   },
   "dependencies": {
-    "@nuxtjs/color-mode": "^3.2.0"
+    "@nuxtjs/color-mode": "^3.2.0",
+    "firebase": "^9.17.1",
+    "firebase-admin": "^11.5.0"
   }
 }
