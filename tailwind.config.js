@@ -10,6 +10,9 @@ module.exports = {
     "./app.vue",
   ],
   theme: {
+    colors: {
+      black_thm_2: "#0F172A",
+    },
     extend: {},
     container: {
       padding: {
