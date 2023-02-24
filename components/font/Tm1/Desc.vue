@@ -1,12 +1,12 @@
 <template>
-  <h2><slot /></h2>
+  <p class="desc"><slot /></p>
 </template>
 
 <style scoped>
-h2 {
-  font-size: 24px;
+.desc {
+  font-size: 20px;
+  line-height: 32px;
   font-weight: 400;
   font-family: "Open Sans", sans-serif;
-  @apply text-black_thm_1;
 }
 </style>

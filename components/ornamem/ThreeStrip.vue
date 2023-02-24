@@ -18,7 +18,7 @@ export default {
 .three-strip {
   height: 40px;
   width: 100%;
-  @apply border-t-2 border-b-2 border-black_thm_2 relative;
+  @apply border-t-2 border-b-2 border-black_thm_1 relative;
 }
 .three-strip::before {
   content: "";

@@ -1,10 +1,11 @@
 <template>
-  <p class="wedding-date"><slot /></p>
+  <p class="desc"><slot /></p>
 </template>
 
 <style scoped>
-.wedding-date {
-  font-size: 24px;
+.desc {
+  font-size: 20px;
+  line-height: 32px;
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
 }
