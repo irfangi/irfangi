@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require("tailwindcss/colors");
-
+delete colors["lightBlue"];
+delete colors["warmGray"];
+delete colors["coolGray"];
+delete colors["blueGray"];
+delete colors["trueGray"];
 module.exports = {
   darkMode: "class",
   content: [
@@ -12,7 +16,11 @@ module.exports = {
     "./app.vue",
   ],
   theme: {
-    colors: { ...colors, black_thm_1: "#0F172A", white_thm_1: '#f8fafc' },
+    colors: {
+      ...colors,
+      black_thm_1: "#0F172A",
+      white_thm_1: "#f8fafc",
+    },
     extend: {},
     container: {
       padding: {

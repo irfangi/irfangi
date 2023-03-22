@@ -86,23 +86,105 @@
         </div>
       </div>
       <img
-      class="corner-1"
+        class="corner-1"
         src="~/assets/images/invitation/thm1/corner.png"
         alt="Frame Corner"
       />
-      <img class="corner-2" src="~/assets/images/invitation/thm1/corner.png" alt="Frame Corner">
+      <img
+        class="corner-2"
+        src="~/assets/images/invitation/thm1/corner.png"
+        alt="Frame Corner"
+      />
     </section>
 
-    <section class="galery">
+    <section class="galery bg-gray-200">
+      <div class="grid grid-cols-4 gap-4">
+        <div
+          v-for="(data, index) of galery"
+          :key="index"
+          :class="{
+            'row-span-2': index == 2 || index == 5,
+            'flex items-end': index == 5,
+          }"
+        >
+          <img :src="data.link" :alt="data.name" />
+        </div>
+      </div>
+    </section>
 
+    <section class="date">
+      <div class="container mx-auto">
+        <FontTm1CoupleName class="text-center mb-4"
+          >Acara akan di selenggarakan</FontTm1CoupleName
+        >
+        <div class="grid grid-cols-8 gap-4 mb-10">
+          <CardTm1Time
+            :title="days"
+            subtitle="Hari"
+            class="col-span-1 col-start-3"
+          />
+          <CardTm1Time :title="hours" subtitle="Jam" class="col-span-1" />
+          <CardTm1Time :title="minutes" subtitle="Menit" class="col-span-1" />
+          <CardTm1Time :title="seconds" subtitle="Detik" class="col-span-1" />
+        </div>
+        <div class="grid grid-cols-3">
+          <OrnamemThreeStrip sm left />
+          <FontTm1Desc class="text-center">16 Juli 2023</FontTm1Desc>
+          <OrnamemThreeStrip sm right />
+        </div>
+      </div>
     </section>
   </div>
 </template>
 
 <script setup>
+import { ref } from "vue";
+
 definePageMeta({
   layout: "blank",
 });
+// data
+let galery = ref([]);
+let targetDate = ref("07-16-2023");
+let days = ref("");
+let hours = ref("");
+let minutes = ref("");
+let seconds = ref("");
+
+// insert data
+galery = [
+  { name: "Galery 1", link: "/maya&irfangi/galery/1.jpg" },
+  { name: "Galery 2", link: "/maya&irfangi/galery/2.jpg" },
+  { name: "Galery 6", link: "/maya&irfangi/galery/6.jpg" },
+  { name: "Galery 3", link: "/maya&irfangi/galery/3.jpg" },
+  { name: "Galery 4", link: "/maya&irfangi/galery/4.jpg" },
+  { name: "Galery 7", link: "/maya&irfangi/galery/7.jpg" },
+  { name: "Galery 5", link: "/maya&irfangi/galery/5.jpg" },
+  { name: "Galery 8", link: "/maya&irfangi/galery/8.jpg" },
+  { name: "Galery 9", link: "/maya&irfangi/galery/9.jpg" },
+  { name: "Galery 10", link: "/maya&irfangi/galery/10.jpg" },
+];
+
+// call countdown
+setInterval(() => {
+  const now = new Date().getTime();
+  const distance = new Date(targetDate.value).getTime() - now;
+
+  days.value = Math.floor(distance / (1000 * 60 * 60 * 24));
+  hours.value = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  minutes.value = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  seconds.value = Math.floor((distance % (1000 * 60)) / 1000);
+
+  if (distance < 0) {
+    days.value = "0";
+    hours.value = "0";
+    minutes.value = "0";
+    seconds.value = "0";
+    clearInterval();
+  }
+}, 1000);
 </script>
 
 <style lang="scss" scoped>
@@ -144,12 +226,12 @@ definePageMeta({
       padding: 70px 0;
 
       img {
-        &.corner-1{
+        &.corner-1 {
           position: absolute;
           bottom: 0;
           left: 0;
         }
-        &.corner-2{
+        &.corner-2 {
           position: absolute;
           top: 0;
           right: 0;
@@ -158,8 +240,11 @@ definePageMeta({
       }
     }
 
-    &.galery{
+    &.galery {
       @apply p-5;
+    }
+    &.date {
+      padding: 50px 0;
     }
   }
 }
