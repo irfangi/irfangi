@@ -97,7 +97,7 @@
       />
     </section>
 
-    <section class="galery bg-gray-200">
+    <section class="galery bg-gray-200 hidden">
       <div class="grid grid-cols-4 gap-4">
         <div
           v-for="(data, index) of galery"
@@ -113,7 +113,7 @@
     </section>
 
     <section class="date">
-      <div class="container mx-auto">
+      <div class="container mx-auto bg-gray-200 py-10 rounded-xl mb-10">
         <FontTm1CoupleName class="text-center mb-4"
           >Acara akan di selenggarakan</FontTm1CoupleName
         >
@@ -129,8 +129,32 @@
         </div>
         <div class="grid grid-cols-3">
           <OrnamemThreeStrip sm left />
-          <FontTm1Desc class="text-center">16 Juli 2023</FontTm1Desc>
+          <FontTm1Desc class="text-center">{{ targetDate }}</FontTm1Desc>
           <OrnamemThreeStrip sm right />
+        </div>
+        <div class="flex justify-center mb-4 mt-10">
+          <button
+            class="bg-white_thm_1 hover:bg-gray-400 text-black_thm_1 py-2 px-4 rounded-xl inline-flex items-center shadow"
+          >
+            <IconsTm1Calender class="mr-3"></IconsTm1Calender>
+            <FontTm1Desc>Simpan tanggal acara ke kalender</FontTm1Desc>
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-6 gap-4 container mx-auto">
+        <div class="col-span-4 col-start-2">
+          <div class="bg-gray-200 py-4 rounded-xl">
+            <FontTm1CoupleName class="text-center mb-4"
+              >Resepsi</FontTm1CoupleName
+            >
+            <FontTm1Desc class="text-center mb-4">
+              {{ targetDate }}
+            </FontTm1Desc>
+            <FontTm1Desc class="text-center mb-4"> 11:00 - 13:00 </FontTm1Desc>
+            <FontTm1Desc class="text-center mb-4">
+              SMP Pembangunan Piyungan</FontTm1Desc
+            >
+          </div>
         </div>
       </div>
     </section>
@@ -152,18 +176,18 @@ let minutes = ref("");
 let seconds = ref("");
 
 // insert data
-galery = [
-  { name: "Galery 1", link: "/maya&irfangi/galery/1.jpg" },
-  { name: "Galery 2", link: "/maya&irfangi/galery/2.jpg" },
-  { name: "Galery 6", link: "/maya&irfangi/galery/6.jpg" },
-  { name: "Galery 3", link: "/maya&irfangi/galery/3.jpg" },
-  { name: "Galery 4", link: "/maya&irfangi/galery/4.jpg" },
-  { name: "Galery 7", link: "/maya&irfangi/galery/7.jpg" },
-  { name: "Galery 5", link: "/maya&irfangi/galery/5.jpg" },
-  { name: "Galery 8", link: "/maya&irfangi/galery/8.jpg" },
-  { name: "Galery 9", link: "/maya&irfangi/galery/9.jpg" },
-  { name: "Galery 10", link: "/maya&irfangi/galery/10.jpg" },
-];
+// galery = [
+//   { name: "Galery 1", link: "/maya&irfangi/galery/1.jpg" },
+//   { name: "Galery 2", link: "/maya&irfangi/galery/2.jpg" },
+//   { name: "Galery 6", link: "/maya&irfangi/galery/6.jpg" },
+//   { name: "Galery 3", link: "/maya&irfangi/galery/3.jpg" },
+//   { name: "Galery 4", link: "/maya&irfangi/galery/4.jpg" },
+//   { name: "Galery 7", link: "/maya&irfangi/galery/7.jpg" },
+//   { name: "Galery 5", link: "/maya&irfangi/galery/5.jpg" },
+//   { name: "Galery 8", link: "/maya&irfangi/galery/8.jpg" },
+//   { name: "Galery 9", link: "/maya&irfangi/galery/9.jpg" },
+//   { name: "Galery 10", link: "/maya&irfangi/galery/10.jpg" },
+// ];
 
 // call countdown
 setInterval(() => {
