@@ -22,14 +22,14 @@
 //     return productsData
 // }
 
-import { initializeApp } from "firebase/app";
-import { collection, doc, getDocs, getFirestore } from "firebase/firestore";
-import firebaseConfig from "~~/config/firebase";
+// import { initializeApp } from "firebase/app";
+// import { collection, doc, getDocs, getFirestore } from "firebase/firestore";
+// import firebaseConfig from "~~/config/firebase";
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+// const app = initializeApp(firebaseConfig);
+// const db = getFirestore(app);
 
-export default async () => {
-  const querySnapshot = await getDocs(collection(db, "message"));
-  return querySnapshot;
-};
+// export default async () => {
+//   const querySnapshot = await getDocs(collection(db, "message"));
+//   return querySnapshot;
+// };

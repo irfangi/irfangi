@@ -26,13 +26,35 @@
       </div>
     </div>
   </section>
+  <div style="height: 600px; width: 800px">
+    <l-map ref="map" :use-global-leaflet="false" v-model:zoom="zoom" :center="[47.41322, -1.219482]">
+      <l-tile-layer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        layer-type="base"
+        name="OpenStreetMap"
+      ></l-tile-layer>
+    </l-map>
+  </div>
   <div class="ornamen--yellow"></div>
   <div class="ornamen--purple"></div>
   <div class="ornamen--blue"></div>
 </template>
 
 <script>
-export default {};
+import "leaflet/dist/leaflet.css";
+import { LMap, LTileLayer } from "@vue-leaflet/vue-leaflet";
+
+export default {
+  components: {
+    LMap,
+    LTileLayer,
+  },
+  data() {
+    return {
+      zoom: 2,
+    };
+  },
+};
 </script>
 
 <style scoped>

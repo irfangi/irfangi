@@ -158,6 +158,9 @@
         </div>
       </div>
     </section>
+    <section>
+      <Maps></Maps>
+    </section>
   </div>
 </template>
 
