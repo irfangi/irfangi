@@ -1,11 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/content", "@nuxtjs/color-mode"],
-  css: ["~/assets/css/main.css"],
+  components: [{ path: "~/components", extensions: [".vue"] }],
+  modules: ["@nuxt/content", "@nuxtjs/color-mode", "@nuxtjs/tailwindcss"],
+  css: ["@/assets/css/font.css"],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
+      "postcss-custom-properties": false,
     },
   },
 });
