@@ -5,26 +5,30 @@
         <FontTm1TitleWedding class="text-center mb-10"
           >Undangan Pernikahan</FontTm1TitleWedding
         >
-        <FrameTm1Wedding class="mb-10">Maya & Irfangi</FrameTm1Wedding>
-        <div class="grid grid-cols-4 mb-10">
-          <div class="col-span-2 col-start-2">
-            <div class="grid grid-cols-3 gap-3">
-              <OrnamemThreeStrip />
-              <div class="flex justify-center items-center">
-                <FontTm1WeddingDate>12</FontTm1WeddingDate>
+        <FrameTm1Wedding class="mb-10 text-center"
+          >Maya & Irfangi</FrameTm1Wedding
+        >
+        <div class="grid grid-cols-6 mb-10">
+          <div class="col-span-4 col-span-md-2 col-start-2">
+            <div class="grid grid-cols-12 gap-3">
+              <OrnamemThreeStrip class="col-span-3" />
+              <div class="flex justify-center items-center col-span-6">
+                <FontTm1WeddingDate>13</FontTm1WeddingDate>
                 <FontTm1WeddingDate class="mx-4">JUL</FontTm1WeddingDate>
                 <FontTm1WeddingDate>2023</FontTm1WeddingDate>
               </div>
-              <OrnamemThreeStrip right />
+              <OrnamemThreeStrip right class="col-span-3" />
             </div>
           </div>
         </div>
         <FontTm1TitleWedding class="text-center mb-10"
           >Kpd. Bpk/Ibu/Saudara/i</FontTm1TitleWedding
         >
-        <FontTm1WeddingDate class="uppercase text-center"
-          >Ahmad Qorib</FontTm1WeddingDate
-        >
+        <FontTm1WeddingDate class="uppercase text-center">{{
+          $route.query.to == undefined || $route.query.to == ""
+            ? "No Name"
+            : $route.query.to
+        }}</FontTm1WeddingDate>
       </div>
     </section>
     <!-- ornamen -->
@@ -67,22 +71,22 @@
     <section class="couple">
       <div class="container mx-auto">
         <div class="grid grid-cols-6">
-          <FrameTm1Couple class="col-span-3" image="/maya&irfangi/Maya.png">
-          </FrameTm1Couple>
-          <div class="col-span-3 text-center my-auto">
+          <!-- <FrameTm1Couple class="col-span-3" image="/maya&irfangi/Maya.png">
+          </FrameTm1Couple> -->
+          <div class="col-span-4 text-center my-auto mb-10">
             <FontTm1CoupleName>Khoirotul Umayah</FontTm1CoupleName>
             <FontTm1TitleDesc>Putri dari :</FontTm1TitleDesc>
-            <FontTm1Desc>Bpk. Supri & <br />Ibu Siti Sumringah</FontTm1Desc>
-            <FontTm1Desc>Dari Bantul Yogyakarta</FontTm1Desc>
+            <FontTm1Desc>Bpk. Tasrip & <br />Ibu Zumroah</FontTm1Desc>
+            <FontTm1Desc>Dari Piyungan, Bantul, Yogyakarta</FontTm1Desc>
           </div>
-          <div class="col-span-3 text-center my-auto">
+          <div class="col-span-4 col-start-3 text-center my-auto">
             <FontTm1CoupleName>Irfangi</FontTm1CoupleName>
             <FontTm1TitleDesc>Putri dari :</FontTm1TitleDesc>
-            <FontTm1Desc>Bpk. Kasihyanto & <br />Ibu Romelah</FontTm1Desc>
+            <FontTm1Desc>Bpk. Kasih Yanto & <br />Ibu Romelah</FontTm1Desc>
             <FontTm1Desc>Dari Kritig, Petanahan, Kebumen</FontTm1Desc>
           </div>
-          <FrameTm1Couple class="col-span-3" image="/maya&irfangi/Irfangi.png">
-          </FrameTm1Couple>
+          <!-- <FrameTm1Couple class="col-span-3" image="/maya&irfangi/Irfangi.png">
+          </FrameTm1Couple> -->
         </div>
       </div>
       <img
@@ -113,35 +117,35 @@
     </section>
 
     <section class="date">
-      <div class="container mx-auto bg-gray-200 py-10 rounded-xl mb-10">
-        <FontTm1CoupleName class="text-center mb-4"
-          >Acara akan di selenggarakan</FontTm1CoupleName
-        >
-        <div class="grid grid-cols-8 gap-4 mb-10">
-          <CardTm1Time
-            :title="days"
-            subtitle="Hari"
-            class="col-span-1 col-start-3"
-          />
-          <CardTm1Time :title="hours" subtitle="Jam" class="col-span-1" />
-          <CardTm1Time :title="minutes" subtitle="Menit" class="col-span-1" />
-          <CardTm1Time :title="seconds" subtitle="Detik" class="col-span-1" />
-        </div>
-        <div class="grid grid-cols-3">
-          <OrnamemThreeStrip sm left />
-          <FontTm1Desc class="text-center">{{ targetDate }}</FontTm1Desc>
-          <OrnamemThreeStrip sm right />
-        </div>
-        <div class="flex justify-center mb-4 mt-10">
-          <button
-            class="bg-white_thm_1 hover:bg-gray-400 text-black_thm_1 py-2 px-4 rounded-xl inline-flex items-center shadow"
+      <div class="bg-blue-100">
+        <div class="container py-10 rounded-xl mb-10">
+          <FontTm1CoupleName class="text-center mb-4"
+            >Acara akan di selenggarakan</FontTm1CoupleName
           >
-            <IconsTm1Calender class="mr-3"></IconsTm1Calender>
-            <FontTm1Desc>Simpan tanggal acara ke kalender</FontTm1Desc>
-          </button>
+          <div class="grid grid-cols-4 gap-4 mb-10">
+            <CardTm1Time :title="days" subtitle="Hari" class="col-span-1" />
+            <CardTm1Time :title="hours" subtitle="Jam" class="col-span-1" />
+            <CardTm1Time :title="minutes" subtitle="Menit" class="col-span-1" />
+            <CardTm1Time :title="seconds" subtitle="Detik" class="col-span-1" />
+          </div>
+          <div class="grid grid-cols-12">
+            <OrnamemThreeStrip sm left class="col-span-4" />
+            <FontTm1Desc class="text-center col-span-4">{{
+              targetDate
+            }}</FontTm1Desc>
+            <OrnamemThreeStrip sm right class="col-span-4" />
+          </div>
+          <div class="flex justify-center mb-4 mt-10">
+            <button
+              class="bg-white_thm_1 hover:bg-gray-400 text-black_thm_1 py-2 px-4 rounded-xl inline-flex items-center shadow"
+            >
+              <IconsTm1Calender class="mr-3"></IconsTm1Calender>
+              <FontTm1Desc>Simpan tanggal acara ke kalender</FontTm1Desc>
+            </button>
+          </div>
         </div>
       </div>
-      <div class="grid grid-cols-6 gap-4 container mx-auto">
+      <div class="grid grid-cols-6 gap-4 container mx-auto mb-10">
         <div class="col-span-4 col-start-2">
           <div class="bg-gray-200 py-4 rounded-xl">
             <FontTm1CoupleName class="text-center mb-4"
@@ -150,17 +154,18 @@
             <FontTm1Desc class="text-center mb-4">
               {{ targetDate }}
             </FontTm1Desc>
-            <FontTm1Desc class="text-center mb-4"> 11:00 - 13:00 </FontTm1Desc>
+            <FontTm1Desc class="text-center mb-4"> 10:00 - 11:00 </FontTm1Desc>
             <FontTm1Desc class="text-center mb-4">
               SMP Pembangunan Piyungan</FontTm1Desc
             >
           </div>
         </div>
       </div>
+      <div class="container mx-auto">
+        <Maps></Maps>
+      </div>
     </section>
-    <section>
-      <Maps></Maps>
-    </section>
+    <IconsTm1Music />
   </div>
 </template>
 
@@ -170,9 +175,17 @@ import { ref } from "vue";
 definePageMeta({
   layout: "blank",
 });
+
+useHead({
+  title: "Undangan Nikah Maya & Irfangi",
+  bodyAttrs: {
+    class: "overflow-hidden",
+  },
+});
+
 // data
 let galery = ref([]);
-let targetDate = ref("07-16-2023");
+let targetDate = ref("07-13-2023");
 let days = ref("");
 let hours = ref("");
 let minutes = ref("");
@@ -223,8 +236,12 @@ setInterval(() => {
     &.bursh-1 {
       position: absolute;
       top: 0;
-      width: 600px;
-      left: 200px;
+      left: 0;
+      max-width: 600px;
+      width: 100%;
+      @media only screen and (min-width: 768px) {
+        left: 150px;
+      }
     }
     &.bursh-2 {
       position: absolute;
@@ -257,12 +274,20 @@ setInterval(() => {
           position: absolute;
           bottom: 0;
           left: 0;
+          width: 200px;
+          @media only screen and (min-width: 640px) {
+            width: 400px;
+          }
         }
         &.corner-2 {
           position: absolute;
           top: 0;
           right: 0;
           transform: rotate(180deg);
+          width: 200px;
+          @media only screen and (min-width: 640px) {
+            width: 400px;
+          }
         }
       }
     }
@@ -271,7 +296,7 @@ setInterval(() => {
       @apply p-5;
     }
     &.date {
-      padding: 50px 0;
+      padding: 0 0 50px 0;
     }
   }
 }
