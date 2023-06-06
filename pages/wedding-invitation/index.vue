@@ -50,19 +50,21 @@
     <section class="quote">
       <div class="container mx-auto">
         <div class="grid grid-cols-12">
-          <FontTm1Arab class="col-span-10 col-start-2 text-center mb-4"
+          <FontTm1Arab
+            class="col-span-10 col-start-2 text-center mb-4 quotes-text animated"
             >وَمِنْ ءَايَٰتِهِۦٓ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَٰجًا
             لِّتَسْكُنُوٓا۟ إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ
             إِنَّ فِى ذَٰلِكَ لَءَايَٰتٍ لِّقَوْمٍ يَتَفَكَّرُونَ</FontTm1Arab
           >
-          <FontTm1Desc class="col-span-10 col-start-2 text-center mb-4"
+          <FontTm1Desc
+            class="col-span-10 col-start-2 text-center mb-4 quotes-text animated"
             >“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
             untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung
             dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa
             kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar
             terdapat tanda-tanda bagi kaum yang berpikir“</FontTm1Desc
           >
-          <FontTm1Desc class="col-span-12 text-center"
+          <FontTm1Desc class="col-span-12 text-center quotes-text animated"
             >QS Ar-Rum: 21</FontTm1Desc
           >
         </div>
@@ -74,19 +76,23 @@
           <!-- <FrameTm1Couple class="col-span-3" image="/maya&irfangi/Maya.png">
           </FrameTm1Couple> -->
           <div class="col-span-4 text-center my-auto mb-10">
-            <FontTm1CoupleName>Khoirotul Umayah</FontTm1CoupleName>
-            <FontTm1TitleDesc>Putri dari :</FontTm1TitleDesc>
-            <FontTm1Desc>Bpk. Tasrip & <br />Ibu Zumroah</FontTm1Desc>
-            <FontTm1Desc>Dari Piyungan, Bantul, Yogyakarta</FontTm1Desc>
+            <div class="name-couple animated">
+              <FontTm1CoupleName>Khoirotul Umayah</FontTm1CoupleName>
+              <FontTm1TitleDesc>Putri dari :</FontTm1TitleDesc>
+              <FontTm1Desc>Bpk. Tasrip & <br />Ibu Zumroah</FontTm1Desc>
+              <FontTm1Desc>Dari Piyungan, Bantul, Yogyakarta</FontTm1Desc>
+            </div>
           </div>
           <div class="col-span-4 col-start-3 text-center my-auto">
-            <FontTm1CoupleName>Irfangi</FontTm1CoupleName>
-            <FontTm1TitleDesc>Putri dari :</FontTm1TitleDesc>
-            <FontTm1Desc>Bpk. Kasih Yanto & <br />Ibu Romelah</FontTm1Desc>
-            <FontTm1Desc>Dari Kritig, Petanahan, Kebumen</FontTm1Desc>
-          </div>
-          <!-- <FrameTm1Couple class="col-span-3" image="/maya&irfangi/Irfangi.png">
+            <div class="name-couple animated">
+              <FontTm1CoupleName>Irfangi</FontTm1CoupleName>
+              <FontTm1TitleDesc>Putri dari :</FontTm1TitleDesc>
+              <FontTm1Desc>Bpk. Kasih Yanto & <br />Ibu Romelah</FontTm1Desc>
+              <FontTm1Desc>Dari Kritig, Petanahan, Kebumen</FontTm1Desc>
+            </div>
+            <!-- <FrameTm1Couple class="col-span-3" image="/maya&irfangi/Irfangi.png">
           </FrameTm1Couple> -->
+          </div>
         </div>
       </div>
       <img
@@ -119,21 +125,29 @@
     <section class="date">
       <div class="bg-blue-100">
         <div class="container py-10 rounded-xl mb-10">
-          <FontTm1CoupleName class="text-center mb-4"
+          <FontTm1CoupleName class="text-center mb-4 title-date animated"
             >Acara akan di selenggarakan</FontTm1CoupleName
           >
-          <div class="grid grid-cols-4 gap-4 mb-10">
+          <div class="grid grid-cols-4 gap-4 mb-10 count-down animated">
             <CardTm1Time :title="days" subtitle="Hari" class="col-span-1" />
             <CardTm1Time :title="hours" subtitle="Jam" class="col-span-1" />
             <CardTm1Time :title="minutes" subtitle="Menit" class="col-span-1" />
             <CardTm1Time :title="seconds" subtitle="Detik" class="col-span-1" />
           </div>
           <div class="grid grid-cols-12">
-            <OrnamemThreeStrip sm left class="col-span-4" />
-            <FontTm1Desc class="text-center col-span-4">{{
+            <OrnamemThreeStrip
+              sm
+              left
+              class="col-span-4 ornamen-date animated"
+            />
+            <FontTm1Desc class="text-center col-span-4 event-date animated">{{
               targetDate
             }}</FontTm1Desc>
-            <OrnamemThreeStrip sm right class="col-span-4" />
+            <OrnamemThreeStrip
+              sm
+              right
+              class="col-span-4 ornamen-date animated"
+            />
           </div>
           <div class="flex justify-center mb-4 mt-10">
             <button
@@ -147,7 +161,7 @@
       </div>
       <div class="grid grid-cols-6 gap-4 container mx-auto mb-10">
         <div class="col-span-4 col-start-2">
-          <div class="bg-gray-200 py-4 rounded-xl">
+          <div class="bg-gray-200 py-4 rounded-xl event-card animated">
             <FontTm1CoupleName class="text-center mb-4"
               >Resepsi</FontTm1CoupleName
             >
@@ -156,7 +170,7 @@
             </FontTm1Desc>
             <FontTm1Desc class="text-center mb-4"> 10:00 - 11:00 </FontTm1Desc>
             <FontTm1Desc class="text-center mb-4">
-              SMP Pembangunan Piyungan</FontTm1Desc
+              Piyungan Bantul Yogyakarta</FontTm1Desc
             >
           </div>
         </div>
@@ -225,6 +239,48 @@ setInterval(() => {
     clearInterval();
   }
 }, 1000);
+onMounted(() => {
+  // start animate
+  // quote
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      console.log(entry.isIntersecting, entry.target);
+      if (entry.isIntersecting && entry.target.className == "quote") {
+        document
+          .querySelectorAll(".quotes-text")[0]
+          .classList.add("fadeInLeft");
+        document
+          .querySelectorAll(".quotes-text")[1]
+          .classList.add("fadeInRight");
+        document.querySelectorAll(".quotes-text")[2].classList.add("fadeInTop");
+      }
+      if (entry.isIntersecting && entry.target.className == "couple") {
+        document
+          .querySelectorAll(".name-couple")[0]
+          .classList.add("fadeInLeft");
+        document
+          .querySelectorAll(".name-couple")[1]
+          .classList.add("fadeInRight");
+      }
+      if (entry.isIntersecting && entry.target.className == "date") {
+        document.querySelector(".title-date").classList.add("fadeInTop");
+        document.querySelector(".count-down").classList.add("fadeInTop");
+        document.querySelector(".event-date").classList.add("fadeInTop");
+        document.querySelector(".event-card").classList.add("fadeInTop");
+        document
+          .querySelectorAll(".ornamen-date")[0]
+          .classList.add("fadeInLeft");
+        document
+          .querySelectorAll(".ornamen-date")[1]
+          .classList.add("fadeInRight");
+      }
+    });
+  });
+  observer.observe(document.querySelector("section.quote"));
+  observer.observe(document.querySelector("section.couple"));
+  observer.observe(document.querySelector("section.date"));
+  // end animate
+});
 </script>
 
 <style lang="scss" scoped>
@@ -299,5 +355,85 @@ setInterval(() => {
       padding: 0 0 50px 0;
     }
   }
+  // animated start
+  @-webkit-keyframes fadeInTop {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+    }
+  }
+  @keyframes fadeInTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @-webkit-keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+    }
+  }
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @-webkit-keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(0);
+    }
+  }
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .animated {
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    &.fadeInTop {
+      -webkit-animation-name: fadeInTop;
+      animation-name: fadeInTop;
+    }
+    &.fadeInRight {
+      -webkit-animation-name: fadeInRight;
+      animation-name: fadeInRight;
+    }
+    &.fadeInLeft {
+      -webkit-animation-name: fadeInLeft;
+      animation-name: fadeInLeft;
+    }
+  }
+  // animated end
 }
 </style>
