@@ -58,7 +58,7 @@
       </div>
     </div>
     <audio ref="music" loop>
-      <source src="/Sampai Menutup Mata.mp3" type="audio/ogg" />
+      <source src="/Sampai_Menutup_Mata.mp3" type="audio/ogg" />
     </audio>
     <div
       class="player rounded-full bg-white cursor-pointer hover:bg-gray-300"
