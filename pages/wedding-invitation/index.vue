@@ -2,13 +2,13 @@
   <div class="main">
     <section class="wedding">
       <div class="container mx-auto">
-        <FontTm1TitleWedding class="text-center mb-10"
+        <FontTm1TitleWedding class="text-center mb-4 mb-sm-10"
           >Undangan Pernikahan</FontTm1TitleWedding
         >
-        <FrameTm1Wedding class="mb-10 text-center"
+        <FrameTm1Wedding class="mb-4 mb-sm-10 text-center"
           >Maya & Irfangi</FrameTm1Wedding
         >
-        <div class="grid grid-cols-6 mb-10">
+        <div class="grid grid-cols-6 mb-4 mb-sm-10">
           <div class="col-span-4 col-span-md-2 col-start-2">
             <div class="grid grid-cols-12 gap-3">
               <OrnamemThreeStrip class="col-span-3" />
@@ -21,7 +21,7 @@
             </div>
           </div>
         </div>
-        <FontTm1TitleWedding class="text-center mb-10"
+        <FontTm1TitleWedding class="text-center mb-4 mb-sm-10"
           >Kpd. Bpk/Ibu/Saudara/i</FontTm1TitleWedding
         >
         <FontTm1WeddingDate class="uppercase text-center">{{
@@ -315,7 +315,10 @@ onMounted(() => {
     z-index: 1;
     position: relative;
     &.wedding {
-      padding: 100px 0;
+      padding: 40px 0;
+      @media only screen and (min-width: 640px) {
+        padding: 60px 0;
+      }
     }
 
     &.quote {
