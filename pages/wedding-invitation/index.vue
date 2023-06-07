@@ -2,13 +2,13 @@
   <div class="main">
     <section class="wedding">
       <div class="container mx-auto">
-        <FontTm1TitleWedding class="text-center mb-4 mb-sm-10"
+        <!-- <FontTm1TitleWedding class="text-center mb-4 mb-sm-10"
           >Undangan Pernikahan</FontTm1TitleWedding
-        >
+        > -->
         <FrameTm1Wedding class="mb-4 mb-sm-10 text-center"
           >Maya & Irfangi</FrameTm1Wedding
         >
-        <div class="grid grid-cols-6 mb-4 mb-sm-10">
+        <!-- <div class="grid grid-cols-6 mb-4 mb-sm-10">
           <div class="col-span-12 col-span-md-4 col-span-md-2 col-start-md-2">
             <div class="grid grid-cols-9 grid-cols-md-12 gap-3">
               <OrnamemThreeStrip class="col-span-3" />
@@ -20,15 +20,15 @@
               <OrnamemThreeStrip right class="col-span-3" />
             </div>
           </div>
-        </div>
-        <FontTm1TitleWedding class="text-center mb-4 mb-sm-10"
+        </div> -->
+        <!-- <FontTm1TitleWedding class="text-center mb-4 mb-sm-10 pt-4 pt-md-10"
           >Kpd. Bpk/Ibu/Saudara/i</FontTm1TitleWedding
         >
         <FontTm1WeddingDate class="uppercase text-center">{{
           $route.query.to == undefined || $route.query.to == ""
             ? "No Name"
             : $route.query.to
-        }}</FontTm1WeddingDate>
+        }}</FontTm1WeddingDate> -->
       </div>
     </section>
     <!-- ornamen -->
@@ -72,10 +72,10 @@
     </section>
     <section class="couple">
       <div class="container mx-auto">
-        <div class="grid grid-cols-6">
+        <div class="grid grid-cols-6 gap-8">
           <!-- <FrameTm1Couple class="col-span-3" image="/maya&irfangi/Maya.png">
           </FrameTm1Couple> -->
-          <div class="col-span-4 text-center my-auto mb-10">
+          <div class="col-span-3 text-center my-auto">
             <div class="name-couple animated">
               <FontTm1CoupleName>Khoirotul Umayah</FontTm1CoupleName>
               <FontTm1TitleDesc>Putri dari :</FontTm1TitleDesc>
@@ -83,7 +83,31 @@
               <FontTm1Desc>Dari Piyungan, Bantul, Yogyakarta</FontTm1Desc>
             </div>
           </div>
-          <div class="col-span-4 col-start-3 text-center my-auto">
+          <div class="col-span-3 flex justify-center">
+            <div class="couple__ornamen--left">
+              <img
+                src="~/assets/images/invitation/thm1/maya.png"
+                class="pt-6"
+                alt=""
+              />
+              <FontTm1CoupleName class="text-center"
+                >Pengantin Wanita</FontTm1CoupleName
+              >
+            </div>
+          </div>
+          <div class="col-span-3 flex justify-center">
+            <div class="couple__ornamen--right">
+              <img
+                src="~/assets/images/invitation/thm1/irfangi.png"
+                class="pt-6"
+                alt=""
+              />
+              <FontTm1CoupleName class="text-center"
+                >Pengantin Pria</FontTm1CoupleName
+              >
+            </div>
+          </div>
+          <div class="col-span-3 text-center my-auto">
             <div class="name-couple animated">
               <FontTm1CoupleName>Irfangi</FontTm1CoupleName>
               <FontTm1TitleDesc>Putri dari :</FontTm1TitleDesc>
@@ -123,7 +147,7 @@
     </section>
 
     <section class="date">
-      <div class="bg-blue-100">
+      <div class="bg-sage">
         <div class="container mx-auto py-10 rounded-xl mb-10">
           <FontTm1CoupleName class="text-center mb-4 title-date animated"
             >Acara akan di selenggarakan</FontTm1CoupleName
@@ -161,7 +185,7 @@
       </div>
       <div class="grid grid-cols-6 gap-4 container mx-auto mb-10">
         <div class="col-span-4 col-start-2">
-          <div class="bg-gray-200 py-4 rounded-xl event-card animated">
+          <div class="bg-sage py-4 rounded-xl event-card animated">
             <FontTm1CoupleName class="text-center mb-4"
               >Resepsi</FontTm1CoupleName
             >
@@ -193,7 +217,7 @@ definePageMeta({
 useHead({
   title: "Undangan pernikahan Maya & Irfangi",
   description: "Undangan pernikahan Maya & Irfangi pada 13 Juli 2023",
-  keywords:"Undangan pernikahan Maya & Irfangi pada 13 Juli 2023",
+  keywords: "Undangan pernikahan Maya & Irfangi pada 13 Juli 2023",
   bodyAttrs: {
     class: "overflow-hidden",
   },
@@ -325,16 +349,33 @@ onMounted(() => {
 
     &.quote {
       padding: 70px 0;
-      @apply bg-gray-200;
+      background: #bad2c0;
     }
     &.couple {
       padding: 70px 0;
 
+      .couple__ornamen {
+        &--left {
+          width: max-content;
+          background: #bad2c0;
+          img {
+            transform: translateX(-30px);
+          }
+        }
+        &--right {
+          width: max-content;
+          background: #bad2c0;
+          img {
+            transform: translateX(30px);
+          }
+        }
+      }
       img {
         &.corner-1 {
           position: absolute;
           bottom: 0;
           left: 0;
+          z-index: -1;
           width: 200px;
           @media only screen and (min-width: 640px) {
             width: 400px;
@@ -344,6 +385,7 @@ onMounted(() => {
           position: absolute;
           top: 0;
           right: 0;
+          z-index: -1;
           transform: rotate(180deg);
           width: 200px;
           @media only screen and (min-width: 640px) {
@@ -358,6 +400,9 @@ onMounted(() => {
     }
     &.date {
       padding: 0 0 50px 0;
+      .bg-sage {
+        background: #bad2c0;
+      }
     }
   }
   // animated start
