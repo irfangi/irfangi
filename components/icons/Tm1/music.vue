@@ -9,7 +9,7 @@
           <FrameTm1Wedding class="mb-4 mb-sm-10 text-center"
             >Maya & Irfangi</FrameTm1Wedding
           >
-          <div class="grid grid-cols-6 mb-4 mb-sm-10">
+          <!-- <div class="grid grid-cols-6 mb-4 mb-sm-10">
             <div class="col-span-12 col-span-md-4 col-span-md-2 col-start-md-2">
               <div class="grid grid-cols-9 grid-cols-md-12 gap-3">
                 <OrnamemThreeStrip class="col-span-3" />
@@ -21,8 +21,8 @@
                 <OrnamemThreeStrip right class="col-span-3" />
               </div>
             </div>
-          </div>
-          <FontTm1TitleWedding class="text-center mb-4 mb-sm-10"
+          </div> -->
+          <FontTm1TitleWedding class="text-center mb-4 mb-sm-10 pt-4 pt-md-10"
             >Kpd. Bpk/Ibu/Saudara/i</FontTm1TitleWedding
           >
           <FontTm1WeddingDate class="uppercase text-center">{{
@@ -158,7 +158,7 @@ export default {
     &.wedding {
       padding: 25px 0;
       @media only screen and (min-width: 640px) {
-        padding: 50px 0;
+        padding: 50px 0 18px 0;
       }
     }
 
