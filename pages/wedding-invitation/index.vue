@@ -9,10 +9,10 @@
           >Maya & Irfangi</FrameTm1Wedding
         >
         <div class="grid grid-cols-6 mb-4 mb-sm-10">
-          <div class="col-span-4 col-span-md-2 col-start-2">
-            <div class="grid grid-cols-12 gap-3">
+          <div class="col-span-12 col-span-md-4 col-span-md-2 col-start-md-2">
+            <div class="grid grid-cols-9 grid-cols-md-12 gap-3">
               <OrnamemThreeStrip class="col-span-3" />
-              <div class="flex justify-center items-center col-span-6">
+              <div class="flex justify-center items-center col-span-3">
                 <FontTm1WeddingDate>13</FontTm1WeddingDate>
                 <FontTm1WeddingDate class="mx-4">JUL</FontTm1WeddingDate>
                 <FontTm1WeddingDate>2023</FontTm1WeddingDate>
@@ -124,7 +124,7 @@
 
     <section class="date">
       <div class="bg-blue-100">
-        <div class="container py-10 rounded-xl mb-10">
+        <div class="container mx-auto py-10 rounded-xl mb-10">
           <FontTm1CoupleName class="text-center mb-4 title-date animated"
             >Acara akan di selenggarakan</FontTm1CoupleName
           >
@@ -191,7 +191,9 @@ definePageMeta({
 });
 
 useHead({
-  title: "Undangan Nikah Maya & Irfangi",
+  title: "Undangan pernikahan Maya & Irfangi",
+  description: "Undangan pernikahan Maya & Irfangi pada 13 Juli 2023",
+  keywords:"Undangan pernikahan Maya & Irfangi pada 13 Juli 2023",
   bodyAttrs: {
     class: "overflow-hidden",
   },

@@ -10,10 +10,10 @@
             >Maya & Irfangi</FrameTm1Wedding
           >
           <div class="grid grid-cols-6 mb-4 mb-sm-10">
-            <div class="col-span-4 col-span-md-2 col-start-2">
-              <div class="grid grid-cols-12 gap-3">
+            <div class="col-span-12 col-span-md-4 col-span-md-2 col-start-md-2">
+              <div class="grid grid-cols-9 grid-cols-md-12 gap-3">
                 <OrnamemThreeStrip class="col-span-3" />
-                <div class="flex justify-center items-center col-span-6">
+                <div class="flex justify-center items-center col-span-3">
                   <FontTm1WeddingDate>13</FontTm1WeddingDate>
                   <FontTm1WeddingDate class="mx-4">JUL</FontTm1WeddingDate>
                   <FontTm1WeddingDate>2023</FontTm1WeddingDate>
@@ -83,7 +83,7 @@ export default {
     isOpen: false,
   }),
   mounted() {
-    this.$refs.music.volume = 0.1;
+    this.$refs.music.volume = 0.5;
   },
   methods: {
     toggleMusic() {
