@@ -110,7 +110,7 @@
           <div class="col-span-3 text-center my-auto">
             <div class="name-couple animated">
               <FontTm1CoupleName>Irfangi</FontTm1CoupleName>
-              <FontTm1TitleDesc>Putri dari :</FontTm1TitleDesc>
+              <FontTm1TitleDesc>Putra dari :</FontTm1TitleDesc>
               <FontTm1Desc>Bpk. Kasih Yanto & <br />Ibu Romelah</FontTm1Desc>
               <FontTm1Desc>Dari Kritig, Petanahan, Kebumen</FontTm1Desc>
             </div>
@@ -164,8 +164,8 @@
               left
               class="col-span-4 ornamen-date animated"
             />
-            <FontTm1Desc class="text-center col-span-4 event-date animated">{{
-              targetDate
+            <FontTm1Desc class="text-center col-span-4 event-date animated">Kamis, {{
+              formatDate(targetDate)
             }}</FontTm1Desc>
             <OrnamemThreeStrip
               sm
@@ -186,13 +186,13 @@
       <div class="grid grid-cols-6 gap-4 container mx-auto mb-10">
         <div class="col-span-4 col-start-2">
           <div class="bg-sage py-4 rounded-xl event-card animated">
-            <FontTm1CoupleName class="text-center mb-4"
-              >Resepsi</FontTm1CoupleName
-            >
+            <FontTm1CoupleName class="text-center mb-4">Akad</FontTm1CoupleName>
             <FontTm1Desc class="text-center mb-4">
-              {{ targetDate }}
+              Kamis, {{ formatDate(targetDate) }}
             </FontTm1Desc>
-            <FontTm1Desc class="text-center mb-4"> 10:00 - 11:00 </FontTm1Desc>
+            <FontTm1Desc class="text-center mb-4">
+              10:00 - Selesai
+            </FontTm1Desc>
             <FontTm1Desc class="text-center mb-4">
               Piyungan Bantul Yogyakarta</FontTm1Desc
             >
@@ -201,13 +201,48 @@
       </div>
       <div class="container mx-auto">
         <Maps></Maps>
+        <div class="flex justify-center my-4">
+          <a
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=-7.825657,110.486431"
+          >
+            <button
+              class="bg-white_thm_1 hover:bg-gray-400 text-black_thm_1 py-2 px-4 rounded-xl inline-flex items-center shadow"
+            >
+              <FontTm1Desc>Arahkan Google Maps</FontTm1Desc>
+            </button>
+          </a>
+        </div>
       </div>
     </section>
+    <section class="gift">
+      <div class="container mx-auto">
+        <FontTm1CoupleName class="text-center mb-4"
+          >Kirim Hadiah</FontTm1CoupleName
+        >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <CardTm1Bank
+            class="mx-auto"
+            rek="8023014309"
+            name="Khoirotul Umayah"
+            bankImage="/bank/bca.png"
+          ></CardTm1Bank>
+          <CardTm1Bank
+            class="mx-auto"
+            rek="195000610904"
+            name="Irfangi"
+            bankImage="/bank/mandiri.png"
+          ></CardTm1Bank>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">Footer</footer>
     <IconsTm1Music />
   </div>
 </template>
 
 <script setup>
+import moment from "moment";
 import { ref } from "vue";
 
 definePageMeta({
@@ -245,11 +280,15 @@ let seconds = ref("");
 //   { name: "Galery 10", link: "/maya&irfangi/galery/10.jpg" },
 // ];
 
+// method
+function formatDate(date) {
+  return moment(date).format("DD MMMM YYYY");
+}
+// end method
 // call countdown
 setInterval(() => {
   const now = new Date().getTime();
   const distance = new Date(targetDate.value).getTime() - now;
-
   days.value = Math.floor(distance / (1000 * 60 * 60 * 24));
   hours.value = Math.floor(
     (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -403,6 +442,13 @@ onMounted(() => {
       .bg-sage {
         background: #bad2c0;
       }
+    }
+    &.gift {
+      background: #bad2c0;
+      padding: 50px 0;
+    }
+    &.footer {
+      background: gray;
     }
   }
   // animated start
