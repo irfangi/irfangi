@@ -13,25 +13,27 @@
         name="Google maps"
         :zoom="zoom"
       ></l-tile-layer>
+      <l-marker :lat-lng="center"></l-marker>
     </l-map>
   </div>
 </template>
 
 <script>
 import "leaflet/dist/leaflet.css";
-import { LMap, LTileLayer } from "@vue-leaflet/vue-leaflet";
+import { LMap, LTileLayer, LMarker } from "@vue-leaflet/vue-leaflet";
 
 export default {
   components: {
     LMap,
     LTileLayer,
+    LMarker,
   },
   data() {
     return {
       zoom: 16,
       url: "https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
       attribution: `© Google Maps`,
-      center:[-7.8259823,110.4816743]
+      center: [-7.825657, 110.486431],
     };
   },
 };
