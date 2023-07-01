@@ -87,7 +87,7 @@
             <div class="couple__ornamen--left">
               <img
                 src="~/assets/images/invitation/thm1/maya.png"
-                class="pt-6"
+                class="pt-6 animated"
                 alt=""
               />
               <FontTm1CoupleName class="text-center"
@@ -99,7 +99,7 @@
             <div class="couple__ornamen--right">
               <img
                 src="~/assets/images/invitation/thm1/irfangi.png"
-                class="pt-6"
+                class="pt-6 animated"
                 alt=""
               />
               <FontTm1CoupleName class="text-center"
@@ -164,9 +164,9 @@
               left
               class="col-span-4 ornamen-date animated"
             />
-            <FontTm1Desc class="text-center col-span-4 event-date animated">Kamis, {{
-              formatDate(targetDate)
-            }}</FontTm1Desc>
+            <FontTm1Desc class="text-center col-span-4 event-date animated"
+              >Kamis, {{ formatDate(targetDate) }}</FontTm1Desc
+            >
             <OrnamemThreeStrip
               sm
               right
@@ -174,12 +174,21 @@
             />
           </div>
           <div class="flex justify-center mb-4 mt-10">
-            <button
-              class="bg-white_thm_1 hover:bg-gray-400 text-black_thm_1 py-2 px-4 rounded-xl inline-flex items-center shadow"
+            <a
+              target="_blank"
+              href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NmlqNnFkM2U4cHY2aW8wNmhwNG1za3JodHEgaXJmYW5naTU2NEBt&amp;tmsrc=irfangi564%40gmail.com"
             >
-              <IconsTm1Calender class="mr-3"></IconsTm1Calender>
-              <FontTm1Desc>Simpan tanggal acara ke kalender</FontTm1Desc>
-            </button>
+              <button
+                class="bg-white_thm_1 hover:bg-gray-400 text-black_thm_1 py-2 px-4 rounded-xl inline-flex items-center shadow"
+              >
+                <IconsTm1Calender class="mr-3"></IconsTm1Calender>
+                <FontTm1Desc class="mr-3">Ingatkan</FontTm1Desc>
+                <img
+                  border="0"
+                  src="https://www.google.com/calendar/images/ext/gc_button1_en.gif"
+                />
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -225,18 +234,18 @@
             class="mx-auto"
             rek="8023014309"
             name="Khoirotul Umayah"
-            bankImage="/bank/bca.png"
+            bankImage="/bank/bca_logo.png"
           ></CardTm1Bank>
           <CardTm1Bank
             class="mx-auto"
-            rek="195000610904"
+            rek="185000610904"
             name="Irfangi"
-            bankImage="/bank/mandiri.png"
+            bankImage="/bank/mandiri_logo.png"
           ></CardTm1Bank>
         </div>
       </div>
     </section>
-    <footer class="footer">Footer</footer>
+    <!-- <footer class="footer">Footer</footer> -->
     <IconsTm1Music />
   </div>
 </template>
@@ -250,7 +259,7 @@ definePageMeta({
 });
 
 useHead({
-  title: "Undangan pernikahan Maya & Irfangi",
+  title: "Pernikahan Maya & Irfangi",
   description: "Undangan pernikahan Maya & Irfangi pada 13 Juli 2023",
   keywords: "Undangan pernikahan Maya & Irfangi pada 13 Juli 2023",
   bodyAttrs: {
@@ -309,7 +318,6 @@ onMounted(() => {
   // quote
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      console.log(entry.isIntersecting, entry.target);
       if (entry.isIntersecting && entry.target.className == "quote") {
         document
           .querySelectorAll(".quotes-text")[0]
@@ -326,6 +334,12 @@ onMounted(() => {
         document
           .querySelectorAll(".name-couple")[1]
           .classList.add("fadeInRight");
+        document
+          .querySelector(".couple__ornamen--left img")
+          .classList.add("fadeInLeftCustom");
+        document
+          .querySelector(".couple__ornamen--right img")
+          .classList.add("fadeInRightCustom");
       }
       if (entry.isIntersecting && entry.target.className == "date") {
         document.querySelector(".title-date").classList.add("fadeInTop");
@@ -482,6 +496,16 @@ onMounted(() => {
       -webkit-transform: translateX(0);
     }
   }
+  @-webkit-keyframes fadeInLeftCustom {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateX(0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateX(-30px);
+    }
+  }
   @keyframes fadeInLeft {
     0% {
       opacity: 0;
@@ -490,6 +514,16 @@ onMounted(() => {
     100% {
       opacity: 1;
       transform: translateX(0);
+    }
+  }
+  @keyframes fadeInLeftCustom {
+    0% {
+      opacity: 0;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-30px);
     }
   }
   @-webkit-keyframes fadeInRight {
@@ -502,6 +536,16 @@ onMounted(() => {
       -webkit-transform: translateX(0);
     }
   }
+  @-webkit-keyframes fadeInRightCustom {
+    0% {
+      opacity: 0;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(30px);
+    }
+  }
   @keyframes fadeInRight {
     0% {
       opacity: 0;
@@ -510,6 +554,16 @@ onMounted(() => {
     100% {
       opacity: 1;
       transform: translateX(0);
+    }
+  }
+  @keyframes fadeInRightCustom {
+    0% {
+      opacity: 0;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(30px);
     }
   }
   .animated {
@@ -528,6 +582,14 @@ onMounted(() => {
     &.fadeInLeft {
       -webkit-animation-name: fadeInLeft;
       animation-name: fadeInLeft;
+    }
+    &.fadeInRightCustom {
+      -webkit-animation-name: fadeInRightCustom;
+      animation-name: fadeInRightCustom;
+    }
+    &.fadeInLeftCustom {
+      -webkit-animation-name: fadeInLeftCustom;
+      animation-name: fadeInLeftCustom;
     }
   }
   // animated end

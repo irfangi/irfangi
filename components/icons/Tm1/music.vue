@@ -3,8 +3,8 @@
     <div class="cover" :class="{ active: isOpen }">
       <section class="wedding">
         <div class="container mx-auto">
-          <FontTm1TitleWedding class="text-center mb-4 mb-sm-10"
-            >Undangan Pernikahan</FontTm1TitleWedding
+          <FontTm1TitleWedding class="text-center mb-6 mt-4 mb-sm-10"
+            >Wedding of</FontTm1TitleWedding
           >
           <FrameTm1Wedding class="mb-4 mb-sm-10 text-center"
             >Maya & Irfangi</FrameTm1Wedding
@@ -22,9 +22,9 @@
               </div>
             </div>
           </div> -->
-          <FontTm1TitleWedding class="text-center mb-4 mb-sm-10 pt-4 pt-md-10"
-            >Kpd. Bpk/Ibu/Saudara/i</FontTm1TitleWedding
-          >
+          <FontTm1CoupleName class="text-center mb-4 mb-sm-10 pt-4 pt-md-10"
+          >13 Juli 2023</FontTm1CoupleName
+        >
           <FontTm1WeddingDate class="uppercase text-center">{{
             $route.query.to == undefined || $route.query.to == ""
               ? "No Name"
@@ -58,7 +58,7 @@
       </div>
     </div>
     <audio ref="music" loop>
-      <source src="/Sampai_Menutup_Mata.mp3" type="audio/ogg" />
+      <source src="/backsound.mp3" type="audio/ogg" />
     </audio>
     <div
       class="player rounded-full bg-white cursor-pointer hover:bg-gray-300"
