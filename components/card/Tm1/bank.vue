@@ -1,6 +1,6 @@
 <template>
   <div class="bank text-center">
-    <img :src="bankImage" alt="Bank" class="mb-2 mx-auto" />
+    <img :src="bankImage" alt="Bank" class="mb-2 mx-auto shadow"/>
     <FontTm1TitleDesc>{{ name }}</FontTm1TitleDesc>
     <FontTm1Desc class="copy" @click="copyRek"
       >{{ rek }} <IconsCopy class="inline-block"></IconsCopy
