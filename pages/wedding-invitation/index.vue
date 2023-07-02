@@ -260,12 +260,13 @@ definePageMeta({
 
 useHead({
   title: "Pernikahan Maya & Irfangi",
-  description: "Undangan pernikahan Maya & Irfangi pada 13 Juli 2023",
-  keywords: "Undangan pernikahan Maya & Irfangi pada 13 Juli 2023",
   bodyAttrs: {
     class: "overflow-hidden",
   },
-  image:"https://irfangi.site/wedding-invitation?to="
+  meta: [
+    { name: 'description', content: "Pernikahan Maya & Irfangi pada 13 Juli 2023" },
+    { name: 'image', content: "https://irfangi.site/wedding-invitation?to=" }
+  ],
 });
 
 // data
