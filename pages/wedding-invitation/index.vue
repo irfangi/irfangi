@@ -77,7 +77,7 @@
           </FrameTm1Couple> -->
           <div class="col-span-3 text-center my-auto">
             <div class="name-couple animated">
-              <FontTm1CoupleName>Khoirotul Umayah</FontTm1CoupleName>
+              <FontTm1CoupleName>Khoirotul Umayah, S.Pd.</FontTm1CoupleName>
               <FontTm1TitleDesc>Putri dari :</FontTm1TitleDesc>
               <FontTm1Desc>Bpk. Tasrip & <br />Ibu Zumroah</FontTm1Desc>
               <FontTm1Desc>Dari Piyungan, Bantul, Yogyakarta</FontTm1Desc>
@@ -109,7 +109,7 @@
           </div>
           <div class="col-span-3 text-center my-auto">
             <div class="name-couple animated">
-              <FontTm1CoupleName>Irfangi</FontTm1CoupleName>
+              <FontTm1CoupleName>Irfangi, S.Kom.</FontTm1CoupleName>
               <FontTm1TitleDesc>Putra dari :</FontTm1TitleDesc>
               <FontTm1Desc>Bpk. Kasih Yanto & <br />Ibu Romelah</FontTm1Desc>
               <FontTm1Desc>Dari Kritig, Petanahan, Kebumen</FontTm1Desc>
@@ -209,7 +209,7 @@
         </div>
       </div>
       <div class="container mx-auto">
-        <Maps></Maps>
+        <Maps class="shadow"></Maps>
         <div class="flex justify-center my-4">
           <a
             target="_blank"
@@ -265,6 +265,7 @@ useHead({
   bodyAttrs: {
     class: "overflow-hidden",
   },
+  image:"https://irfangi.site/wedding-invitation?to="
 });
 
 // data

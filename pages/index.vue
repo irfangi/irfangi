@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <!-- <section class="hero">
     <div class="grid grid-cols-2 py-20">
       <div class="flex justify-center flex-col">
         <h4 class="name">Hi I'm Irfangi 👋</h4>
@@ -28,11 +28,17 @@
   </section>
   <div class="ornamen--yellow"></div>
   <div class="ornamen--purple"></div>
-  <div class="ornamen--blue"></div>
+  <div class="ornamen--blue"></div> -->
+  <div class="container mx-auto coming-soon">
+    <h1>Coming Soon</h1>
+    <p>Crafting extraordinary experiences. Stay tuned for my portfolio!</p>
+  </div>
 </template>
 
 <script>
-
+definePageMeta({
+  layout: "blank",
+});
 export default {
   data() {
     return {
@@ -42,7 +48,17 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.coming-soon{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h1{
+    font-size: 60px;
+  }
+}
 .ornamen--yellow {
   width: 200px;
   height: 200px;
