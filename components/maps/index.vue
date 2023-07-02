@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 600px; width: 100%">
+  <div class="maps">
     <l-map
       ref="map"
       :use-global-leaflet="false"
@@ -39,4 +39,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.maps{
+  width: 100%;
+  height: 60vh;
+}
+</style>
