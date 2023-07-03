@@ -83,7 +83,7 @@ export default {
     isOpen: false,
   }),
   mounted() {
-    this.$refs.music.volume = 0.5;
+    this.$refs.music.volume = 0.7;
   },
   methods: {
     toggleMusic() {

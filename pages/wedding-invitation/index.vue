@@ -173,7 +173,7 @@
               class="col-span-4 ornamen-date animated"
             />
           </div>
-          <div class="flex justify-center mb-4 mt-10">
+          <!-- <div class="flex justify-center mb-4 mt-10">
             <a
               target="_blank"
               href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NmlqNnFkM2U4cHY2aW8wNmhwNG1za3JodHEgaXJmYW5naTU2NEBt&amp;tmsrc=irfangi564%40gmail.com"
@@ -189,7 +189,7 @@
                 />
               </button>
             </a>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="grid grid-cols-6 gap-4 container mx-auto mb-10">
