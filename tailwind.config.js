@@ -6,6 +6,7 @@ delete colors["coolGray"];
 delete colors["blueGray"];
 delete colors["trueGray"];
 module.exports = {
+  darkMode: "media",
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
