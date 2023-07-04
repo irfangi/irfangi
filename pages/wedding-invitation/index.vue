@@ -245,7 +245,70 @@
         </div>
       </div>
     </section>
-    <!-- <footer class="footer">Footer</footer> -->
+    <footer class="footer">
+      <div class="container mx-auto">
+        <!-- form -->
+        <FontTm1CoupleName class="text-center mb-4"
+          >Pesan & Ucapan</FontTm1CoupleName
+        >
+        <form class="mb-4 form-chat">
+          <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="nama">
+              <FontTm1TitleDesc>Nama</FontTm1TitleDesc>
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="nama"
+              type="text"
+              v-model="payload.name"
+              placeholder="Nama"
+              :class="{
+                'border-red-600':
+                  errorForm && (payload.name == null || payload.name == ''),
+              }"
+              required
+            />
+          </div>
+          <div class="mb-6">
+            <label class="block text-gray-700 font-bold mb-2" for="desc">
+              <FontTm1TitleDesc> Pesan </FontTm1TitleDesc>
+            </label>
+            <textarea
+              rows="4"
+              id="desc"
+              v-model="payload.desc"
+              placeholder="Tulis Ucapan.."
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              :class="{
+                'border-red-600':
+                  errorForm && (payload.desc == null || payload.desc == ''),
+              }"
+            >
+            </textarea>
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="bg-gray-500 mb-6 hover:bg-gray-700 text-white font-bold py-2 px-10 rounded focus:outline-none focus:shadow-outline mx-auto"
+              type="button"
+              @click="sendMessage()"
+            >
+              Kirim
+            </button>
+          </div>
+        </form>
+        <!-- chat -->
+        <div class="chat-box bg-gray-100">
+          <div
+            v-for="(message, index) of messages"
+            :key="index"
+            class="chat bg-gray-50 shadow-md"
+          >
+            <h6 class="text-gray-800">{{ message.name }}</h6>
+            <p class="text-gray-700">{{ message.desc }}</p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <IconsTm1Music />
   </div>
 </template>
@@ -253,6 +316,11 @@
 <script setup>
 import moment from "moment";
 import { ref } from "vue";
+import { createClient } from "@supabase/supabase-js";
+const supabase = createClient(
+  "https://uxujrgxltdedrcxxvafd.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV4dWpyZ3hsdGRlZHJjeHh2YWZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODY4Nzk4NDMsImV4cCI6MjAwMjQ1NTg0M30.MHUmBK9h7oVNjeaiX0-cMQkJi8ld7qtJFPdn1REuizY"
+);
 
 definePageMeta({
   layout: "blank",
@@ -264,18 +332,24 @@ useHead({
     class: "overflow-hidden",
   },
   meta: [
-    { name: 'description', content: "Pernikahan Maya & Irfangi pada 13 Juli 2023" },
-    { name: 'image', content: "https://irfangi.site/wedding-invitation?to=" }
+    {
+      name: "description",
+      content: "Pernikahan Maya & Irfangi pada 13 Juli 2023",
+    },
+    { name: "image", content: "https://irfangi.site/wedding-invitation?to=" },
   ],
 });
 
 // data
 let galery = ref([]);
+let messages = ref([]);
 let targetDate = ref("07-13-2023");
 let days = ref("");
 let hours = ref("");
 let minutes = ref("");
 let seconds = ref("");
+let errorForm = ref(false);
+let payload = ref({ name: "", desc: "" });
 
 // insert data
 // galery = [
@@ -315,7 +389,52 @@ setInterval(() => {
     clearInterval();
   }
 }, 1000);
+
+const getMessage = async () => {
+  try {
+    let { data, error, status } = await supabase.from("komentar").select("*");
+    if (status == 200) {
+      const sorted = data.sort((a, b) => {
+        return moment(b.created_at) - moment(a.created_at);
+      });
+      messages.value = sorted;
+    } else {
+      console.log("Error " + status + error);
+    }
+  } catch (error) {
+    console.log({ error });
+  }
+};
+const sendMessage = async () => {
+  try {
+    if (
+      payload.value.desc != null &&
+      payload.value.desc != "" &&
+      payload.value.name != null &&
+      payload.value.name != ""
+    ) {
+      const res = await supabase
+        .from("komentar")
+        .insert([
+          {
+            topic: "invitation",
+            name: payload.value.name,
+            desc: payload.value.desc,
+          },
+        ])
+        .select();
+      errorForm.value = false;
+      payload.value = { name: "", desc: "" };
+      getMessage();
+    } else {
+      errorForm.value = true;
+    }
+  } catch (error) {
+    console.log({ error });
+  }
+};
 onMounted(() => {
+  getMessage();
   // start animate
   // quote
   const observer = new IntersectionObserver(entries => {
@@ -460,13 +579,42 @@ onMounted(() => {
       }
     }
     &.gift {
-      background: #bad2c0;
-      padding: 50px 0;
-    }
-    &.footer {
-      background: gray;
+      // background: #bad2c0;
+      padding: 0 0 50px 0;
     }
   }
+
+  // start footer ucapan
+  .footer {
+    background: #bad2c0;
+    padding: 50px 0;
+    .form-chat {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .chat-box {
+      height: 70vh;
+      border-radius: 18px;
+      overflow: auto;
+      max-width: 600px;
+      margin: 0 auto;
+      .chat {
+        border-radius: 0px 12px 0 12px;
+        margin: 18px;
+        padding: 18px;
+        h6 {
+          font-weight: 600;
+          font-size: 20px;
+          text-transform: uppercase;
+          margin-bottom: 8px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  // end footer
   // animated start
   @-webkit-keyframes fadeInTop {
     0% {

@@ -23,8 +23,8 @@
             </div>
           </div> -->
           <FontTm1CoupleName class="text-center mb-4 mb-sm-10 pt-4 pt-md-10"
-          >13 Juli 2023</FontTm1CoupleName
-        >
+            >13 Juli 2023</FontTm1CoupleName
+          >
           <FontTm1WeddingDate class="uppercase text-center">{{
             $route.query.to == undefined || $route.query.to == ""
               ? "No Name"
@@ -83,7 +83,7 @@ export default {
     isOpen: false,
   }),
   mounted() {
-    this.$refs.music.volume = 0.7;
+    this.$refs.music.volume = 0.8;
   },
   methods: {
     toggleMusic() {
