@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   components: [{ path: "~/components", extensions: [".vue"] }],
   modules: ["@nuxt/content", "@nuxtjs/tailwindcss"],
   css: ["@/assets/css/font.css"],
+  tailwindcss:{
+    darkMode:false
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
