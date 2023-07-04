@@ -1,6 +1,6 @@
 <template>
   <div class="main bg-gray-50 text-gray-800">
-    <section class="weddin">
+    <section class="wedding">
       <div class="container mx-auto">
         <!-- <FontTm1TitleWedding class="text-center mb-4 mb-sm-10"
           >Undangan Pernikahan</FontTm1TitleWedding
