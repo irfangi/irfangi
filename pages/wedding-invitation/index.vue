@@ -1,6 +1,6 @@
 <template>
-  <div class="main">
-    <section class="wedding">
+  <div class="main bg-gray-50 text-gray-800">
+    <section class="weddin">
       <div class="container mx-auto">
         <!-- <FontTm1TitleWedding class="text-center mb-4 mb-sm-10"
           >Undangan Pernikahan</FontTm1TitleWedding
@@ -492,6 +492,7 @@ onMounted(() => {
 
   @apply bg-white_thm_1;
   img {
+    z-index: 1;
     &.bursh-1 {
       position: absolute;
       top: 0;
