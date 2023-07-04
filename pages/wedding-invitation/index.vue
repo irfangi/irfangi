@@ -434,7 +434,9 @@ const sendMessage = async () => {
     console.log({ error });
   }
 };
+
 onMounted(() => {
+  document.documentElement.setAttribute("data-theme", "light");
   getMessage();
   // start animate
   // quote
