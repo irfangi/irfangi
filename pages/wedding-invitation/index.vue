@@ -435,8 +435,21 @@ const sendMessage = async () => {
   }
 };
 
+// Mendeteksi peramban di Android
+function isAndroidBrowser() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  return (
+    /android/i.test(userAgent) &&
+    !/chrome|firefox|opera|safari/i.test(userAgent)
+  );
+}
 onMounted(() => {
-  document.documentElement.setAttribute("data-theme", "light");
+  if (isAndroidBrowser()) {
+    alert(
+      "Gunakan Browser pihak ketiga seperti Google Chrome, Mozilla Firefox, atau Opera Mini untuk pengalaman browsing yang lebih baik di Android"
+    );
+    window.close();
+  }
   getMessage();
   // start animate
   // quote
@@ -492,7 +505,6 @@ onMounted(() => {
 
   @apply bg-white_thm_1;
   img {
-    z-index: 1;
     &.bursh-1 {
       position: absolute;
       top: 0;
