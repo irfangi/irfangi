@@ -330,7 +330,7 @@ definePageMeta({
 useHead({
   title: "Pernikahan Maya & Irfangi",
   bodyAttrs: {
-    class: "overflow-hidden bg-white",
+    class: "overflow-hidden",
   },
   meta: [
     {
