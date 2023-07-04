@@ -324,6 +324,7 @@ const supabase = createClient(
 
 definePageMeta({
   layout: "blank",
+  colorMode: "light",
 });
 
 useHead({
