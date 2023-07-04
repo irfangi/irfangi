@@ -337,7 +337,7 @@ useHead({
       name: "description",
       content: "Pernikahan Maya & Irfangi pada 13 Juli 2023",
     },
-    { name: "image", content: "https://irfangi.site/wedding-invitation?to=" },
+    { name: "color-schem", content: "light only" },
   ],
 });
 
