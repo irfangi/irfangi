@@ -32,7 +32,7 @@
       </div>
     </section>
     <!-- ornamen -->
-    <img
+    <!-- <img
       src="~/assets/images/invitation/thm1/bursh-effect.png"
       alt="Bursh Effect"
       class="bursh-1"
@@ -46,7 +46,7 @@
       src="~/assets/images/invitation/thm1/bursh-effect-3.png"
       alt="Bursh Effect"
       class="bursh-3"
-    />
+    /> -->
     <section class="quote">
       <div class="container mx-auto">
         <div class="grid grid-cols-12">
