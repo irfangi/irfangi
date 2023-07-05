@@ -456,7 +456,7 @@ function isVivoBrowser() {
 
 onMounted(() => {
   if (isXiaomiBrowser() || isVivoBrowser()) {
-    alert('Gunakan Browser Lain Untuk Membuka Undangan Ini!')
+    alert('Mohon Gunakan Browser Lain Untuk Membuka Undangan Ini!')
     window.close();
   } else {
     console.log("other browser");
@@ -550,7 +550,7 @@ onMounted(() => {
 
     &.quote {
       padding: 70px 0;
-      background: #bad2c0;
+      background: #84b390;
     }
     &.couple {
       padding: 70px 0;
@@ -558,14 +558,14 @@ onMounted(() => {
       .couple__ornamen {
         &--left {
           width: max-content;
-          background: #bad2c0;
+          background: #84b390;
           img {
             transform: translateX(-30px);
           }
         }
         &--right {
           width: max-content;
-          background: #bad2c0;
+          background: #84b390;
           img {
             transform: translateX(30px);
           }
@@ -602,18 +602,18 @@ onMounted(() => {
     &.date {
       padding: 0 0 50px 0;
       .bg-sage {
-        background: #bad2c0;
+        background: #84b390;
       }
     }
     &.gift {
-      // background: #bad2c0;
+      // background: #84b390;
       padding: 0 0 50px 0;
     }
   }
 
   // start footer ucapan
   .footer {
-    background: #bad2c0;
+    background: #84b390;
     padding: 50px 0;
     .form-chat {
       max-width: 600px;
