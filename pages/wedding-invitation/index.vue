@@ -337,10 +337,11 @@ definePageMeta({
 const colorMode = useColorMode();
 console.log(colorMode.preference);
 useHead({
-  title: "Pernikahan Maya & Irfangi",
+  title: "Undangan",
   bodyAttrs: {
     class: "overflow-hidden bg-gray-50 dark:bg-gray-50",
   },
+  link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
   meta: [
     {
       name: "description",
@@ -444,23 +445,7 @@ const sendMessage = async () => {
   }
 };
 
-// Mendeteksi peramban Xiaomi
-function isXiaomiBrowser() {
-  return /MiuiBrowser/i.test(navigator.userAgent);
-}
-
-// Mendeteksi peramban Vivo
-function isVivoBrowser() {
-  return /VivoBrowser/i.test(navigator.userAgent);
-}
-
 onMounted(() => {
-  if (isXiaomiBrowser() || isVivoBrowser()) {
-    alert('Mohon Gunakan Browser Lain Untuk Membuka Undangan Ini!')
-    window.close();
-  } else {
-    console.log("other browser");
-  }
   getMessage();
   // start animate
   // quote
