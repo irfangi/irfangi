@@ -1,5 +1,5 @@
 <template>
-  <p class="desc text-gray-800 dark:text-gray-800"><slot /></p>
+  <p class="desc"><slot /></p>
 </template>
 
 <style scoped>
@@ -8,5 +8,6 @@
   line-height: 32px;
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
+  color: black !important;
 }
 </style>
