@@ -354,7 +354,7 @@ useHead({
 // data
 let galery = ref([]);
 let messages = ref([]);
-let targetDate = ref("07-13-2023");
+let targetDate = ref("2023-07-13");
 let days = ref("");
 let hours = ref("");
 let minutes = ref("");
