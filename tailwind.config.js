@@ -20,7 +20,7 @@ module.exports = {
       ...colors,
       black_thm_1: "#0F172A",
       white_thm_1: "#f8fafc",
-      sage: "#bad2c0",
+      sage: "#84b390",
     },
     extend: {},
     container: {
