@@ -443,7 +443,24 @@ const sendMessage = async () => {
     console.log({ error });
   }
 };
+
+// Mendeteksi peramban Xiaomi
+function isXiaomiBrowser() {
+  return /MiuiBrowser/i.test(navigator.userAgent);
+}
+
+// Mendeteksi peramban Vivo
+function isVivoBrowser() {
+  return /VivoBrowser/i.test(navigator.userAgent);
+}
+
 onMounted(() => {
+  if (isXiaomiBrowser() || isVivoBrowser()) {
+    alert('Gunakan Browser Lain Untuk Membuka Undangan Ini!')
+    window.close();
+  } else {
+    console.log("other browser");
+  }
   getMessage();
   // start animate
   // quote
