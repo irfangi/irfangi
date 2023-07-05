@@ -1,5 +1,5 @@
 <template>
-  <p class="wedding-date"><slot /></p>
+  <p class="wedding-date text-gray-800 dark:text-gray-800"><slot /></p>
 </template>
 
 <style scoped>

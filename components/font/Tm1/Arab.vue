@@ -1,5 +1,5 @@
 <template>
-  <p class="arab"><slot /></p>
+  <p class="arab text-gray-800 dark:text-gray-800"><slot /></p>
 </template>
 
 <style scoped>

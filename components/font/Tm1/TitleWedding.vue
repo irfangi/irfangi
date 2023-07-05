@@ -1,5 +1,5 @@
 <template>
-  <h2><slot /></h2>
+  <h2 class="text-gray-800 dark:text-gray-800"><slot /></h2>
 </template>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <template>
-  <div class="main bg-gray-50 text-gray-800">
+  <div class="main bg-gray-50 dark:bg-gray-50 text-gray-800 dark:text-gray-800">
     <section class="wedding">
       <div class="container mx-auto">
         <!-- <FontTm1TitleWedding class="text-center mb-4 mb-sm-10"
@@ -70,7 +70,7 @@
         </div>
       </div>
     </section>
-    <section class="couple">
+    <section class="couple bg-gray-50 dark:bg-gray-50 text-gray-800 dark:text-gray-800">
       <div class="container mx-auto">
         <div class="grid grid-cols-6 gap-8">
           <!-- <FrameTm1Couple class="col-span-3" image="/maya&irfangi/Maya.png">
@@ -146,7 +146,7 @@
       </div>
     </section>
 
-    <section class="date">
+    <section class="date bg-gray-50 dark:bg-gray-50 text-gray-800 dark:text-gray-800">
       <div class="bg-sage">
         <div class="container mx-auto py-10 rounded-xl mb-10">
           <FontTm1CoupleName class="text-center mb-4 title-date animated"
@@ -224,7 +224,7 @@
         </div>
       </div>
     </section>
-    <section class="gift">
+    <section class="gift bg-gray-50 dark:bg-gray-50 text-gray-800 dark:text-gray-800">
       <div class="container mx-auto">
         <FontTm1CoupleName class="text-center mb-4"
           >Kirim Hadiah</FontTm1CoupleName
@@ -245,7 +245,7 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
+    <footer class="footer bg-gray-50 dark:bg-gray-50 text-gray-800 dark:text-gray-800">
       <div class="container mx-auto">
         <!-- form -->
         <FontTm1CoupleName class="text-center mb-4"
@@ -330,7 +330,7 @@ definePageMeta({
 useHead({
   title: "Pernikahan Maya & Irfangi",
   bodyAttrs: {
-    class: "overflow-hidden",
+    class: "overflow-hidden bg-gray-50 dark:bg-gray-50",
   },
   meta: [
     {
@@ -434,22 +434,7 @@ const sendMessage = async () => {
     console.log({ error });
   }
 };
-
-// Mendeteksi peramban di Android
-function isAndroidBrowser() {
-  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  return (
-    /android/i.test(userAgent) &&
-    !/chrome|firefox|opera|safari/i.test(userAgent)
-  );
-}
 onMounted(() => {
-  if (isAndroidBrowser()) {
-    alert(
-      "Gunakan Browser pihak ketiga seperti Google Chrome, Mozilla Firefox, atau Opera Mini untuk pengalaman browsing yang lebih baik di Android"
-    );
-    window.close();
-  }
   getMessage();
   // start animate
   // quote

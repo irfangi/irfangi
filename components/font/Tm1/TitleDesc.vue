@@ -1,5 +1,5 @@
 <template>
-  <p class="desc"><slot /></p>
+  <p class="desc text-gray-800 dark:text-gray-800"><slot /></p>
 </template>
 
 <style scoped>

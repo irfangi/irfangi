@@ -1,6 +1,6 @@
 <template>
   <div class="music-player-box">
-    <div class="cover" :class="{ active: isOpen }">
+    <div class="cover bg-gray-50 dark:bg-gray-50" :class="{ active: isOpen }">
       <section class="wedding">
         <div class="container mx-auto">
           <FontTm1TitleWedding class="text-center mb-6 mt-4 mb-sm-10"
