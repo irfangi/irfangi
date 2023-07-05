@@ -70,7 +70,9 @@
         </div>
       </div>
     </section>
-    <section class="couple bg-gray-50 dark:bg-gray-50 text-gray-800 dark:text-gray-800">
+    <section
+      class="couple bg-gray-50 dark:bg-gray-50 text-gray-800 dark:text-gray-800"
+    >
       <div class="container mx-auto">
         <div class="grid grid-cols-6 gap-8">
           <!-- <FrameTm1Couple class="col-span-3" image="/maya&irfangi/Maya.png">
@@ -146,7 +148,9 @@
       </div>
     </section>
 
-    <section class="date bg-gray-50 dark:bg-gray-50 text-gray-800 dark:text-gray-800">
+    <section
+      class="date bg-gray-50 dark:bg-gray-50 text-gray-800 dark:text-gray-800"
+    >
       <div class="bg-sage">
         <div class="container mx-auto py-10 rounded-xl mb-10">
           <FontTm1CoupleName class="text-center mb-4 title-date animated"
@@ -224,7 +228,9 @@
         </div>
       </div>
     </section>
-    <section class="gift bg-gray-50 dark:bg-gray-50 text-gray-800 dark:text-gray-800">
+    <section
+      class="gift bg-gray-50 dark:bg-gray-50 text-gray-800 dark:text-gray-800"
+    >
       <div class="container mx-auto">
         <FontTm1CoupleName class="text-center mb-4"
           >Kirim Hadiah</FontTm1CoupleName
@@ -245,7 +251,9 @@
         </div>
       </div>
     </section>
-    <footer class="footer bg-gray-50 dark:bg-gray-50 text-gray-800 dark:text-gray-800">
+    <footer
+      class="footer bg-gray-50 dark:bg-gray-50 text-gray-800 dark:text-gray-800"
+    >
       <div class="container mx-auto">
         <!-- form -->
         <FontTm1CoupleName class="text-center mb-4"
@@ -326,7 +334,8 @@ definePageMeta({
   layout: "blank",
   colorMode: "light",
 });
-
+const colorMode = useColorMode();
+console.log(colorMode.preference);
 useHead({
   title: "Pernikahan Maya & Irfangi",
   bodyAttrs: {
@@ -744,5 +753,23 @@ onMounted(() => {
     }
   }
   // animated end
+}
+</style>
+<style>
+body {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+}
+.dark-mode body {
+  /* background-color: #091a28;
+  color: #ebf4f1; */
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+}
+.sepia-mode body {
+  /* background-color: #f1e7d0;
+  color: #433422; */
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
 }
 </style>
