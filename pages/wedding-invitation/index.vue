@@ -244,7 +244,7 @@
           ></CardTm1Bank>
           <CardTm1Bank
             class="mx-auto"
-            rek="185000610904"
+            rek="1850000610904"
             name="Irfangi"
             bankImage="/bank/mandiri_logo.png"
           ></CardTm1Bank>
